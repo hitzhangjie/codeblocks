@@ -4,14 +4,14 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
-
-	"github.com/hitzhangjie/gorpc-cli/util/lang"
 )
 
 // BaseNameWithoutExt return basename without extension of `filename`,
 // in which `filename` may contains directory.
 func BaseNameWithoutExt(filename string) string {
-	return lang.TrimRight(".", filepath.Base(filename))
+	b := filepath.Base(filename)
+	ext := filepath.Ext(filename)
+	return b[:len(b)-len(ext)]
 }
 
 // LocateFile 定位protofile目录路径

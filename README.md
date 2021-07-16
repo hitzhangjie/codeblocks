@@ -5,3 +5,4 @@ codeblocks contains some utilities that helps accelerate development.
 - format, format go source file in place
 - fs, filesystem move and copy like Bash shell
 - tar, compress/decmopress in tar format
+- log, convenient logging library and support colorize logging message
