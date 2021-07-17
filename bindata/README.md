@@ -1,9 +1,19 @@
-# bindata
-An easy to use utility that can embed any files into go binary
+# Introduction
 
-Run `bindata -h` to see the usage:
+`bindata` is used for converting file or directory into a go file, whose package name can be specified.
+
+The original file data is stored in a exported variable, so it can be referenced in your code.
+
+# Installation
+
+```
+go get -u git.code.oa.com/gitcode/bindata
+```
+# Help
 
 ```bash
+$ bindata -h
+
 Usage of bindata:
   -gopkg string
     	write transformed data to *.go, whose package is $package (default "gobin")
@@ -12,8 +22,3 @@ Usage of bindata:
   -output string
     	write transformed data to named *.go, which could be linked with binary
 ```
-
-If there's an folder named `DIR` which may contains files and subfolders, then we want to convert it into a go file named `dir.go`, we also want the package named as `package myasset`.
-
-Run  `bindata -gopkg mydir -input DIR -output dir.go` to finish the conversion.
-
